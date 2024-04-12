@@ -1,3 +1,10 @@
+# 😎 References 
+https://exerra.xyz/ 
+
+https://okikio.dev/#about 
+
+https://jpcribeiro.github.io/Portfolio/ 
+
 # Astro Starter Kit: Basics
 
 ```sh
