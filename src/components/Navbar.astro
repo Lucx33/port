@@ -1,10 +1,11 @@
 <div class="Navbar">
     <div class="blur-background"></div>
-	<a class="nav-item name" >Luca</a>
-    <div>
+	<a class="name" >Luca</a>
+    <div class="left-items">
         <a class="nav-item about" >Sobre</a>
         <a class="nav-item portfolio" >Portfolio</a>
         <a class="nav-item contact" >Contato</a>
+        <i class="fab fa-github"></i>
     </div>
 </div>
 <style>
@@ -29,6 +30,14 @@
 		z-index: -1;
 	}
 
+    .name {
+        position: relative;
+        color: white;
+        text-align: center;
+        font-size: 17px;
+        z-index: 1;
+        padding: 10px 20px;
+    }
 
 	.nav-item {
 		position: relative;
@@ -36,5 +45,23 @@
 		text-align: center;
 		font-size: 17px;
 		z-index: 1;
+        padding: 10px 20px;
 	}
+
+    .left-items {
+        position: relative;
+		color: white;
+		text-align: center;
+		font-size: 17px;
+		z-index: 1;
+        padding: 10px 20px;
+    }
+
+    .nav-item:hover {
+        background-color: rgba(222, 222, 222, 0.1);
+        border-radius: 5px;
+    }
+
+
+
 </style>
