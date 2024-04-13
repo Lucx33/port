@@ -1,3 +1,5 @@
+Own personal website built with Astro to showcase my projects and skills.
+
 # 😎 References 
 https://exerra.xyz/ 
 
