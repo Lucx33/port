@@ -4,9 +4,45 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="Luca Lima">
 	<Navbar />
+	<div class="container">
 
+		<p class = "intro">Oi, eu me chamo</p>
+		<p class="name">Luca Lima</p>
+		<p>Estudante de Ciência da Computação</p>
+		<p class="scroll" >↓ Scroll ↓</p>
+	</div>
+	<div class="container">
+		<p>Estou aprendendo a programar e a criar sites. </p>
+		<p>Atualmente estou estudando JavaScript e React.</p>
+		<p>Meu objetivo é me tornar um desenvolvedor web full stack.</p>
+	</div>
 </Layout>
 
 <style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 90vh;
+		color: white;
+		position: relative;
+	}
 
+	.intro {
+		font-size: 1.5rem;
+	}
+
+	.name {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+
+	.scroll {
+		font-size: 1.2rem;
+		position: absolute;
+		bottom: 0;
+		font-weight: 700;
+		color: #00c3ff;
+	}
 </style>
