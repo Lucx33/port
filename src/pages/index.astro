@@ -2,6 +2,20 @@
 import Navbar from '../components/Navbar.astro';
 import Layout from "../layouts/Layout.astro";
 ---
+
+<script>
+	function handleScroll() {
+		const texto = document.getElementById('texto-que-desaparece');
+		const triggerHeight = 100; // Ajuste este valor conforme necessário
+		texto.style.opacity = window.scrollY > triggerHeight ? '0' : '1';
+		console.log(window.scrollY);
+	}
+
+	if (typeof window !== 'undefined') {
+	  window.addEventListener('scroll', handleScroll);
+	}
+</script>
+
 <Layout title="Luca Lima">
 	<Navbar />
 	<div class="container">
@@ -9,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
 		<p class = "intro">Oi, eu me chamo</p>
 		<p class="name">Luca Lima</p>
 		<p>Estudante de Ciência da Computação</p>
-		<p class="scroll" >↓ Scroll ↓</p>
+		<p id = "texto-que-desaparece" class="scroll" >↓ Scroll ↓</p>
 	</div>
 	<div class="container">
 		<p>Estou aprendendo a programar e a criar sites. </p>
@@ -44,5 +58,9 @@ import Layout from "../layouts/Layout.astro";
 		bottom: 0;
 		font-weight: 700;
 		color: #00c3ff;
+	}
+	#texto-que-desaparece {
+		transition: opacity 0.5s;
+		opacity: 1;
 	}
 </style>
