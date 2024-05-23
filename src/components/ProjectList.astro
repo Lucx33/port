@@ -1,0 +1,44 @@
+---
+import people from '../../public/projects.json';
+import Person from './Project.astro';
+---
+<ul class="people-list">
+  {people.map(person => (
+    <Person
+        name={person.name}
+        tags={person.tags}
+        description={person.description}
+        imageFile={person.imageFile}
+        gitLink={person.gitLink}
+        realLink={person.realLink}
+    />
+  ))}
+</ul>
+<style>
+    .people-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three items per row */
+        gap: 1rem; /* Space between items */
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        width: 50%;
+        justify-content: center;
+    }
+    .people-list > *:nth-last-child(1) {
+        grid-column: span 3; /* Span across all columns to center */
+        justify-self: center; /* Center the item */
+    }
+
+    .people-list > *:nth-last-child(2) {
+        grid-column: span 2; /* Span across two columns */
+        justify-self: center; /* Center the item */
+    }
+
+    .people-list > *:nth-last-child(2):nth-last-child(3),
+    .people-list > *:nth-last-child(1):nth-last-child(3) {
+        grid-column: auto; /* Reset span for multiple items */
+        justify-self: auto; /* Reset justify for multiple items */
+    }
+
+</style>

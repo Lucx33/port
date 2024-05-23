@@ -1,0 +1,54 @@
+[
+  {
+    "name": "War em Java",
+    "tags": [
+      "Java",
+      "JUnit"
+    ],
+    "description": "Experienced web developer.",
+    "imageFile": "public/war-image.png",
+    "gitLink": "https://github.com/Lucx33/WAR-POO",
+    "realLink": ""
+  },
+  {
+    "name": "CardaPUC",
+    "tags": [
+      "Flask",
+      "Web",
+      "MongoDB"
+    ],
+    "description": "Experienced web developer.",
+    "imageFile": "path/to/image.jpg",
+    "gitLink": ""
+  },
+  {
+    "name": "Site Pessoal",
+    "tags": [
+      "Astro"
+    ],
+    "description": "Experienced web developer.",
+    "imageFile": "path/to/image.jpg",
+    "gitLink": ""
+  },
+  {
+    "name": "Fornecedor de Jogos",
+    "tags": [
+      "Python",
+      "Pandas",
+      "Pytest"
+    ],
+    "description": "Experienced web developer.",
+    "imageFile": "path/to/image.jpg",
+    "gitLink": ""
+  },
+  {
+    "name": "PUCompass",
+    "tags": [
+      "Django",
+      "Web"
+    ],
+    "description": "Experienced web developer.",
+    "imageFile": "path/to/image.jpg",
+    "gitLink": ""
+  }
+]

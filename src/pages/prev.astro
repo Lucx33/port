@@ -1,0 +1,90 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Layout from "../layouts/Layout.astro";
+---
+
+<script>
+	function handleScroll() {
+		const texto = document.getElementById('texto-que-desaparece');
+		const triggerHeight = 100; // Ajuste este valor conforme necessário
+		texto.style.opacity = window.scrollY > triggerHeight ? '0' : '1';
+		console.log(window.scrollY);
+	}
+
+	if (typeof window !== 'undefined') {
+	  window.addEventListener('scroll', handleScroll);
+	}
+</script>
+
+<Layout title="Luca Lima">
+	<Navbar />
+	<div class="container">
+
+		<p class = "intro">Oi, eu me chamo</p>
+		<p class="name">Luca Lima</p>
+		<p class="typewriter">Estudante de Ciência da Computação</p>
+		<p id = "texto-que-desaparece" class="scroll" >↓ Scroll ↓</p>
+	</div>
+	<div class="container">
+		<p>Estou aprendendo a programar e a criar sites. </p>
+		<p>Atualmente desenvolvendo este site em Astro</p>
+	</div>
+</Layout>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 90vh;
+		color: white;
+		position: relative;
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	.intro {
+		font-size: 1.5rem;
+	}
+
+	.name {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+
+	.scroll {
+		font-size: 1.2rem;
+		position: absolute;
+		bottom: 0;
+		font-weight: 700;
+		color: #00c3ff;
+	}
+	#texto-que-desaparece {
+		transition: opacity 0.5s;
+		opacity: 1;
+	}
+	.typewriter {
+		overflow: hidden; /* Ensures the content is not revealed until the animation */
+		border-right: .15em solid orange; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+
+		letter-spacing: .15em; /* Adjust as needed */
+		animation:
+			typing 2s steps(40, end),
+			blink-caret .5s step-end infinite;
+	}
+
+		/* The typing effect */
+	@keyframes typing {
+		from { width: 0 }
+		to { width: 100% }
+	}
+
+	/* The typewriter cursor effect */
+	@keyframes blink-caret {
+		from, to { border-color: transparent }
+		50% { border-color: #00c3ff; }
+	}
+
+</style>
